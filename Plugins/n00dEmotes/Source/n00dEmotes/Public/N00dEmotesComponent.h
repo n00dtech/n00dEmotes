@@ -106,11 +106,23 @@ public:
 	// Re-enable movement if we are disabled
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "N00dComponents|Emotes|Callable")
 		void EnableEmotesCharacterMovement();
+	// If the Emote was a looping animation, this interrupts its execution. You would call 
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "N00dComponents|Emotes|Callable")
+		bool InterruptEmote();
+	// A looping timer event that exists only if the emote is looping that checks if the player has moved, so that we may interrupt the animation. 
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "N00dComponents|Emotes|System")
+		void MovementCheck();
+	
+///////////////////////////
+// NETWORKING
+///////////////////////////
+
+
 	// Route the emote action via the server
-	UFUNCTION(Server, Unreliable, BlueprintCallable, Category = "N00dComponents|Emotes|Callable")
+	UFUNCTION(Server, Unreliable, BlueprintCallable, Category = "N00dComponents|Emotes|Networked")
 		void ServerEmote(FGameplayTag Tag);
 	// Route the emote action via the server
-	UFUNCTION(NetMulticast, Unreliable, BlueprintCallable, Category = "N00dComponents|Emotes|Callable")
+	UFUNCTION(NetMulticast, Unreliable, BlueprintCallable, Category = "N00dComponents|Emotes|Networked")
 		void MulticastPlayEmote(FName OnSlot);
 
 };

@@ -85,6 +85,17 @@ void UN00dEmotesComponent::EnableEmotesCharacterMovement_Implementation()
 {
 }
 
+// interrupt emote
+bool UN00dEmotesComponent::InterruptEmote_Implementation()
+{
+	return false;
+}
+
+// movement check
+void UN00dEmotesComponent::MovementCheck_Implementation()
+{
+}
+
 // server emote
 void UN00dEmotesComponent::ServerEmote_Implementation(FGameplayTag Tag)
 {
