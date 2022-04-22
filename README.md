@@ -1,17 +1,5 @@
 # n00dEmotes
 n00dEmotes 2.0 is a free an open source Unreal Engine plugin so you may implement emote mechanics in your project in a matter of minutes.
-___
-### Disclaimer
-
-> Main branch is the oldest supported version available on the marketplace due to Visual Script backward compatibility. Which is always the latest 3 versions of the Editor.
-
-If you make script changes in the BPs you are encouraged to commit to main so that the BP changes can be propagated to the latest versions. If you can't make the changes on main but on a version higher than the oldest supported that is fine, but it will take longer to submit the updates to the marketplace as it will require manual intervention to recreate those changes across the incompatible versions. 
-
-If you are making code changes only, you are free make changes across any version you are working in.
-
-This soft rule is to create a level of consistency across this asset so that we don't have multiple different versions of the Plugin across Engine versions. 
-___
-
 
 ### Directions
 
