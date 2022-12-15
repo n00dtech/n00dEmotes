@@ -1,4 +1,4 @@
-/* © Copyright 2020-2021 | n00dbeaver Studios | Developed by db AKA DebellicA */
+// Copyright (c) Developed by Josh (db) Debelec - Published by n00dbeaver Studios 2022 - All Rights Reserved. 
 
 
 #include "N00dEmotesComponent.h"
@@ -32,28 +32,27 @@ void UN00dEmotesComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 }
 
 ///////////////////////////
-// UNIVERSAL FUNCTIONS
+// DEBUG
 ///////////////////////////
 
 // is component disabled
 bool UN00dEmotesComponent::IsEmoteComponentDisabled()
 {
-	return DisableEmoteComponent;
-
+	return false;
 }
 
-
-
-
+bool UN00dEmotesComponent::ShowEmotesDebugWidget_Implementation()
+{
+	return false;
+}
 
 ///////////////////////////
 // EMOTE FUNCTIONS
 ///////////////////////////
 
 // intialise emotes
-bool UN00dEmotesComponent::InitialiseEmotes_Implementation(USkeletalMeshComponent * OwningMesh)
+bool UN00dEmotesComponent::InitialiseEmotes_Implementation(UDataTable* EmotesTable)
 {
-	EmoteMesh = OwningMesh;
 	return true;
 }
 
@@ -96,6 +95,21 @@ void UN00dEmotesComponent::MovementCheck_Implementation()
 {
 }
 
+// build references
+bool UN00dEmotesComponent::BuildReferences_Implementation()
+{
+	return false;
+}
+
+// load footsteps settings
+void UN00dEmotesComponent::LoadEmotesSettings_Implementation()
+{
+}
+
+///////////////////////////
+// NETWORKING
+///////////////////////////
+
 // server emote
 void UN00dEmotesComponent::ServerEmote_Implementation(FGameplayTag Tag)
 {
@@ -106,6 +120,13 @@ void UN00dEmotesComponent::ServerEmote_Implementation(FGameplayTag Tag)
 void UN00dEmotesComponent::MulticastPlayEmote_Implementation(FName OnSlot)
 {
 	PlayEmote(OnSlot);
+}
+
+// get footsteps settings
+void UN00dEmotesComponent::GetEmotesSettings(UN00dEmotesSettings*& EmotesSettings)
+{
+	UN00dEmotesSettings* Settings = GetMutableDefault<UN00dEmotesSettings>();
+	EmotesSettings = Settings;
 }
 
 
@@ -119,5 +140,8 @@ void UN00dEmotesComponent::GetLifetimeReplicatedProps(TArray< FLifetimeProperty 
 	DOREPLIFETIME(UN00dEmotesComponent, SelectedEmote);
 	DOREPLIFETIME(UN00dEmotesComponent, LoadedEmote);
 	DOREPLIFETIME(UN00dEmotesComponent, EmoteMesh);
+	DOREPLIFETIME(UN00dEmotesComponent, LoadedMontage);
+	
 }
+
 
