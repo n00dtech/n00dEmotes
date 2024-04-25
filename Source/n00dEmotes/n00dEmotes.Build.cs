@@ -1,4 +1,4 @@
-// Copyright (c) Developed by Josh (db) Debelec - Published by n00dbeaver Studios 2022 - All Rights Reserved. 
+// Copyright Epic Games, Inc. All Rights Reserved.
 
 using UnrealBuildTool;
 
@@ -26,9 +26,6 @@ public class n00dEmotes : ModuleRules
 			new string[]
 			{
 				"Core",
-                "UMG",
-                "InputCore",
-                "EnhancedInput",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -41,7 +38,6 @@ public class n00dEmotes : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-                "GameplayTags",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
