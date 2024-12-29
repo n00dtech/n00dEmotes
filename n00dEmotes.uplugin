@@ -5,11 +5,11 @@
 	"FriendlyName": "n00dEmotes",
 	"Description": "Express to Impress! Choreograph character charisma and elevate emotional engagement by swiftly integrating expressive emote mechanics, allowing your characters to communicate interactively.",
 	"Category": "n00d",
-	"CreatedBy": "n00dbeaver Studios",
-	"CreatedByURL": "https://www.n00dbeaverstudios.com/",
-	"DocsURL": "https://n00demotes.n00dbeaverstudios.com/",
+	"CreatedBy": "n00dtech",
+	"CreatedByURL": "https://n00d.tech/",
+	"DocsURL": "https://emotes.n00d.tech/",
 	"MarketplaceURL": "https://publish.unrealengine.com/v3/edit-product/50f6fd76c8624773acf81927b58df85e",
-	"SupportURL": "epicgames@n00dbeaverstudios.com",
+	"SupportURL": "support@n00d.tech",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
@@ -21,7 +21,9 @@
 			"LoadingPhase": "Default",
 			"PlatformAllowList": [
 				"Win64",
-				"Linux"
+				"Linux",
+				"Mac",
+				"IOS"
 			]
 		}
 	],
